@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #f1f4f8, #eef2f7);
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, #2c3e50, #34495e);
+  color: white;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* SEARCH PANEL */
+.search-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  background: white;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.search-panel input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.search-panel button {
+  background: #2ecc71;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* SUMMARY CARDS */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  font-size: 14px;
+  color: #777;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #3498db, #2c80b4);
+  color: white;
+}
+
+/* STATUS MESSAGE */
+.status {
+  text-align: center;
+  margin: 18px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* CHART */
+.chart-section {
+  background: white;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+canvas {
+  max-width: 380px;
+  margin: auto;
+  display: block;
+}

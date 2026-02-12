@@ -1,0 +1,180 @@
+/* ===============================
+   GLOBAL
+================================ */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* ===============================
+   BACKGROUND ANIMATION
+================================ */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===============================
+   FULL PAGE
+================================ */
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* ✅ CENTER */
+  align-items: center;
+
+  padding: 0;
+
+  background: linear-gradient(
+    120deg,
+    #070b18,
+    #0d1324,
+    #14142b
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* ===============================
+   REGISTER CARD
+================================ */
+.container {
+  width: 400px;
+  padding: 35px 30px;
+  border-radius: 16px;
+
+  background: rgba(15, 15, 30, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 0 30px rgba(0, 150, 255, 0.35),
+    0 0 60px rgba(0, 0, 0, 0.85);
+
+  color: #ffffff;
+  text-align: center;
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+.container h2 {
+  margin-bottom: 6px;
+  font-size: 22px;
+}
+
+.container h3 {
+  margin-bottom: 25px;
+  font-weight: normal;
+  color: #9bdcff;
+}
+
+/* ===============================
+   INPUTS & SELECT
+================================ */
+.container input,
+.container select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+
+  border: 1px solid #2f5fff;
+  background: rgba(15, 26, 43, 0.9);
+
+  color: #ffffff;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.container input::placeholder {
+  color: #a7c7ff;
+}
+
+.container input:focus,
+.container select:focus {
+  border-color: #00d2ff;
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.6);
+}
+
+.container select {
+  cursor: pointer;
+}
+
+/* ===============================
+   PASSWORD ICON
+================================ */
+.password-box {
+  position: relative;
+}
+
+.password-box span {
+  position: absolute;
+  right: 12px;
+  top: 35%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+  color: #fff;
+
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.container button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 210, 255, 0.4);
+}
+
+/* ===============================
+   LINKS
+================================ */
+.link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.link a {
+  color: #00d2ff;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   MESSAGE
+================================ */
+#message {
+  margin-top: 10px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}

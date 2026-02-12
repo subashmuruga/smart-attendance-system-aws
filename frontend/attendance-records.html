@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Records | Smart Attendance</title>
+  <link rel="stylesheet" href="css/attendance-records.css">
+</head>
+<body>
+
+<header>
+  <h2>Attendance Records</h2>
+  <button onclick="goBack()">⬅ Back</button>
+</header>
+
+<section class="filters">
+  <!-- ✅ NEW: FROM / TO DATE -->
+  <input type="date" id="fromDate">
+  <input type="date" id="toDate">
+
+  <select id="roleFilter">
+    <option value="">All Roles</option>
+    <option value="Admin">Admin</option>
+    <option value="Staff">Staff</option>
+    <option value="Student">Student</option>
+  </select>
+
+  <input type="text" id="searchInput" placeholder="Search name / register no">
+</section>
+
+<section class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Register No</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody id="attendanceBody">
+      <tr>
+        <td colspan="6" style="text-align:center;">
+          Please select date range
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<script src="js/attendance-records.js"></script>
+</body>
+</html>

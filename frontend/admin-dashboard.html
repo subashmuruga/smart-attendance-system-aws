@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> <meta charset="UTF-8"> 
+<title>Admin Dashboard | Smart Attendance</title>
+<link rel="stylesheet" href="css/admin.css"> 
+</head>
+<body>
+<!-- ================= HEADER ================= --> 
+<header> 
+<h2>Smart Attendance System</h2> 
+<div class="user-info"> 
+<span id="adminName"></span> 
+<button onclick="logout()">Logout</button> 
+</div> 
+</header> <!-- ================= PROFILE SECTION ================= --> 
+<section class="profile"> 
+<div class="profile-grid">
+<!-- ===== LEFT : PROFILE CARD ===== --> 
+<div class="profile-card">
+<h3>Admin Profile</h3>
+<img 
+id="profileImg" 
+class="profile-avatar" 
+src="assets/default-avatar.png" 
+alt="Profile Photo" 
+title="Click to preview"
+> 
+<button id="changePhotoBtn" class="small-btn"> 
+Change Photo 
+</button> 
+<input type="file" id="photoInput" accept="image/*" hidden> 
+<div class="photo-actions"> 
+<button id="savePhotoBtn" class="save-btn" style="display:none;"> 
+Save 
+</button> 
+<button id="cancelPhotoBtn" class="cancel-btn" style="display:none;"> 
+Cancel 
+</button> 
+</div> 
+<!-- PROFILE DETAILS (FIXED : SYMBOL + ALIGNMENT) --> 
+<div class="profile-details"> 
+<p><strong>Name :</strong> <span id="name"></span></p> 
+<p><strong>Email :</strong> <span id="email"></span></p> 
+<p><strong>Role :</strong> <span id="role"></span></p> 
+</div> 
+</div> 
+<!-- ===== RIGHT : MOTIVATION CARD ===== --> 
+<div class="quote-card"> 
+<h3>Daily Motivation</h3> 
+<div class="quote-box"> 
+<span id="quoteIcon">🔥</span> 
+<p id="quoteText"></p> 
+</div> 
+<span class="quote-footer"> 
+— Smart Attendance System 
+</span> 
+</div> 
+</div> 
+</section> 
+<!-- ================= DASHBOARD CARDS ================= --> 
+<section class="dashboard"> 
+<div class="card" onclick="goToMarkAttendance()">📸 Mark Attendance</div> 
+<div class="card" onclick="goToAttendanceRecords()">📊 Attendance Records</div> 
+<div class="card" onclick="goToUserManagement()">👥 User Management</div> 
+<div class="card" onclick="goToPage('attendance-download.html')">📥 Download Attendance</div> 
+<div class="card" onclick="goToPage('attendance-percentage.html')">📈 Attendance Percentage</div> 
+</section> 
+<!-- ================= IMAGE PREVIEW MODAL ================= --> 
+<div id="imgModal" class="img-modal"> 
+<div class="img-modal-box"> 
+<span class="close" id="closeModal">&times;</span> 
+<img id="modalImg" class="img-modal-content"> 
+</div> 
+</div>
+<!-- ================= NEW FOOTER ================= -->
+<footer class="footer">
+  <p>© 2026 Smart Attendance System</p>
+  <p>Created with ❤️ by <strong>Subash M</strong></p>
+  <span>AWS • Rekognition • Lambda • DynamoDB</span>
+</footer>
+<script src="js/admin.js"></script> 
+</body> 
+</html>

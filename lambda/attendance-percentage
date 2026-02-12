@@ -1,0 +1,81 @@
+import json
+import boto3
+
+dynamodb = boto3.resource("dynamodb")
+attendance_table = dynamodb.Table("Attendance")
+users_table = dynamodb.Table("Users")
+
+
+def response(status, body):
+    return {
+        "statusCode": status,
+        "headers": {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "GET,OPTIONS"
+        },
+        "body": json.dumps(body)
+    }
+
+
+def lambda_handler(event, context):
+
+    if event.get("httpMethod") == "OPTIONS":
+        return response(200, {})
+
+    params = event.get("queryStringParameters") or {}
+
+    name = params.get("name")
+    role = params.get("role")
+    reg_no = params.get("registerNumber")
+
+    # Load users
+    users = users_table.scan().get("Items", [])
+
+    user = None
+    for u in users:
+        if reg_no and u.get("registerNumber") == reg_no:
+            user = u
+            break
+        if name and u["name"].lower() == name.lower():
+            if role and u["role"] != role:
+                continue
+            user = u
+            break
+
+    if not user:
+        return response(404, {"message": "User not found"})
+
+    # Load attendance
+    attendance = attendance_table.scan().get("Items", [])
+
+    user_records = [
+        a for a in attendance
+        if a["email"] == user["email"]
+    ]
+
+    present_days = len(user_records)
+
+    # total working days = unique dates in attendance table
+    all_dates = set(a["date"] for a in attendance)
+    total_days = len(all_dates)
+
+    absent_days = total_days - present_days
+
+    percentage = round((present_days / total_days) * 100, 2) if total_days else 0
+
+    message = (
+        "⚠ Low attendance! Improve your attendance."
+        if percentage < 70
+        else "✅ Attendance is good. Keep it up!"
+    )
+
+    return response(200, {
+        "name": user["name"],
+        "role": user["role"],
+        "totalDays": total_days,
+        "presentDays": present_days,
+        "absentDays": absent_days,
+        "percentage": percentage,
+        "message": message
+    })

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Face Registration | Smart Attendance System</title>
+  <link rel="stylesheet" href="css/register-face.css">
+</head>
+<body>
+
+  <div class="page">
+    <div class="container">
+      <h2>Face Registration</h2>
+      <h3>Capture your face</h3>
+
+      <video id="video" autoplay></video>
+      <canvas id="canvas" style="display:none;"></canvas>
+
+      <img id="preview" style="display:none; width:100%; border-radius:10px; margin-top:10px;"/>
+
+      <button id="captureBtn">📸 Capture</button>
+      <button id="retakeBtn" style="display:none;">🔄 Retake</button>
+      <button id="submitBtn" style="display:none;">✅ Submit</button>
+
+      <p id="message"></p>
+    </div>
+  </div>
+
+  <script src="js/face-capture.js"></script>
+</body>
+</html>

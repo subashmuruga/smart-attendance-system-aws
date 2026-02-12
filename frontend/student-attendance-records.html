@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Attendance | Smart Attendance</title>
+  <link rel="stylesheet" href="css/student-attendance-records.css">
+</head>
+<body>
+
+<header>
+  <h2>Attendance Records</h2>
+  <button onclick="goBack()">⬅ Back</button>
+</header>
+
+<section class="filters">
+  <input type="date" id="fromDate">
+  <input type="date" id="toDate">
+
+  <!-- SEARCH (same as staff, no role filter) -->
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search name / register no"
+  />
+</section>
+
+<section class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Register No</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody id="attendanceBody">
+      <tr>
+        <td colspan="5" style="text-align:center;">
+          Please select date range
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<script src="js/student-attendance-records.js"></script>
+</body>
+</html>

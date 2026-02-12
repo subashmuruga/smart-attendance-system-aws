@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f9;
+}
+
+header {
+  background: linear-gradient(90deg, #2c3e50, #34495e);
+  color: white;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header button {
+  background: #3498db;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* FILTER BAR */
+.filters {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  margin: 20px;
+  border-radius: 12px;
+}
+
+.filters input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* TABLE */
+.table-container {
+  margin: 20px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #34495e;
+  color: white;
+}
+
+th, td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background: #f7f9fb;
+}

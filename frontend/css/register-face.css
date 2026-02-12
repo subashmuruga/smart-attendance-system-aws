@@ -1,0 +1,130 @@
+/* ===============================
+   GLOBAL
+================================ */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* ===============================
+   BACKGROUND ANIMATION
+================================ */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===============================
+   FULL PAGE
+================================ */
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* ✅ CENTER */
+  align-items: center;
+
+  padding: 0;
+
+  background: linear-gradient(
+    120deg,
+    #070b18,
+    #0d1324,
+    #14142b
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* ===============================
+   FACE REGISTRATION CARD
+================================ */
+.container {
+  width: 420px;
+  padding: 30px;
+  border-radius: 16px;
+
+  background: rgba(15, 15, 30, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 0 30px rgba(0, 150, 255, 0.35),
+    0 0 60px rgba(0, 0, 0, 0.85);
+
+  color: #ffffff;
+  text-align: center;
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+.container h2 {
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+.container h3 {
+  margin-bottom: 15px;
+  font-weight: normal;
+  color: #9bdcff;
+}
+
+/* ===============================
+   VIDEO (CAMERA)
+================================ */
+video {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+
+  border: 2px solid #2f5fff;
+  background: #000;
+
+  box-shadow: 0 0 15px rgba(47, 95, 255, 0.4);
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.container button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 210, 255, 0.4);
+}
+
+/* ===============================
+   MESSAGE
+================================ */
+#message {
+  margin-top: 12px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}

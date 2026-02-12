@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Management | Smart Attendance</title>
+  <link rel="stylesheet" href="css/user-management.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <h2>User Management</h2>
+  <button onclick="goBack()">⬅ Back</button>
+</header>
+
+<!-- ===== SUMMARY CARDS ===== -->
+<section class="summary">
+
+  <div class="card card-main">
+    <div class="card-content">
+      <div class="card-icon">👥</div>
+      <div class="card-text">
+        <h3>Total Users</h3>
+        <p id="totalUsers">0</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-student">
+    <div class="card-content">
+      <div class="card-icon">🎓</div>
+      <div class="card-text">
+        <h3>Students</h3>
+        <p id="studentCount">0</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-staff">
+    <div class="card-content">
+      <div class="card-icon">🧑‍🏫</div>
+      <div class="card-text">
+        <h3>Staff</h3>
+        <p id="staffCount">0</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ===== FILTER BAR ===== -->
+<section class="filters">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search by name or email..."
+  />
+
+  <select id="roleFilter">
+    <option value="">All Roles</option>
+    <option value="Student">Student</option>
+    <option value="Staff">Staff</option>
+    <option value="Admin">Admin</option>
+  </select>
+</section>
+
+<!-- ===== USERS TABLE (MAIN) ===== -->
+<section class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Register No</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="usersBody">
+      <tr>
+        <td colspan="5">Loading users...</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== SMALL CHART (BOTTOM) ===== -->
+<section class="chart-section">
+  <h3>User Distribution</h3>
+  <div class="chart-box">
+    <canvas id="userChart"></canvas>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/user-management.js"></script>
+<!-- ===== EDIT USER MODAL ===== -->
+<!-- ===== EDIT USER MODAL ===== -->
+<div id="editUserModal" class="modal-overlay">
+
+  <div class="modal-card">
+
+    <h3>Edit User</h3>
+
+    <!-- hidden primary key -->
+    <input type="hidden" id="editEmail">
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" id="editName">
+    </div>
+
+    <div class="form-group">
+      <label>Role</label>
+      <select id="editRole">
+        <option value="Admin">Admin</option>
+        <option value="Staff">Staff</option>
+        <option value="Student">Student</option>
+      </select>
+    </div>
+
+    <div class="form-group" id="editRegGroup">
+      <label>Register Number</label>
+      <input type="text" id="editRegNo">
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn-primary" onclick="updateUser()">Save</button>
+      <button class="btn-secondary" onclick="closeEdit()">Cancel</button>
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+</html>

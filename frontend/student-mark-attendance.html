@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mark Attendance | Staff</title>
+  <link rel="stylesheet" href="css/attendance.css">
+</head>
+<body>
+
+<header>
+  <h2>Mark Attendance</h2>
+  <button onclick="goBack()">⬅ Back</button>
+</header>
+
+<section class="attendance-box">
+  <h3>Capture Face</h3>
+
+  <video id="video" autoplay></video>
+  <canvas id="canvas" hidden></canvas>
+
+  <img id="preview" hidden>
+
+  <div class="actions">
+    <button id="captureBtn">📸 Capture</button>
+    <button id="retakeBtn" hidden>🔄 Retake</button>
+    <button id="markBtn" hidden>✅ Mark Attendance</button>
+  </div>
+
+  <p id="message"></p>
+</section>
+
+<script src="js/student-mark-attendance.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #ffffff;
+  width: 380px;
+  padding: 35px 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #1d2671;
+}
+
+h3 {
+  margin-top: 6px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  color: #555;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #1d2671;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box span {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.link {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.link a {
+  color: #1d2671;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+#message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: red;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+video {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #000;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.register-link {
+  margin-top: 15px;
+}

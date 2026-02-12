@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register | Smart Attendance System</title>
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+  <div class="page">
+    <div class="container">
+      <h2>Smart Attendance System</h2>
+      <h3>Create Your Account</h3>
+
+      <form id="registerForm">
+
+        <input type="text" id="name" placeholder="Full Name" required>
+
+        <input type="email" id="email" placeholder="Email" required>
+
+        <div class="password-box">
+          <input type="password" id="password" placeholder="Password" autocomplete="new-password" required>
+          <span id="togglePassword" title="Show password">👁</span>
+        </div>
+
+        <select id="role" required>
+          <option value="">Select Role</option>
+          <option value="Admin">Admin</option>
+          <option value="Staff">Staff</option>
+          <option value="Student">Student</option>
+        </select>
+
+        <input type="text" id="regNo" placeholder="Register Number" style="display:none;">
+
+        <button type="submit">Next</button>
+
+        <p class="link">
+          Already registered?
+          <a href="login.html">Login</a>
+        </p>
+
+        <p id="message"></p>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Percentage | Smart Attendance</title>
+  <link rel="stylesheet" href="css/attendance-percentage.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+  <h2>Attendance Percentage</h2>
+  <button onclick="goBack()">⬅ Back</button>
+</header>
+
+<!-- SEARCH PANEL -->
+<section class="search-panel">
+  <input
+    type="text"
+    id="nameInput"
+    placeholder="Search by Name"
+  />
+
+  <select id="roleFilter">
+    <option value="">All Roles</option>
+    <option value="Admin">Admin</option>
+    <option value="Staff">Staff</option>
+    <option value="Student">Student</option>
+  </select>
+
+  <input
+    type="text"
+    id="regInput"
+    placeholder="Register No (Student only)"
+  />
+
+  <button onclick="checkAttendance()">Check Attendance</button>
+</section>
+
+<!-- SUMMARY -->
+<section class="summary">
+  <div class="card">
+    <h3>Total Days</h3>
+    <p id="totalDays">0</p>
+  </div>
+
+  <div class="card">
+    <h3>Present</h3>
+    <p id="presentDays">0</p>
+  </div>
+
+  <div class="card">
+    <h3>Absent</h3>
+    <p id="absentDays">0</p>
+  </div>
+
+  <div class="card highlight">
+    <h3>Attendance %</h3>
+    <p id="percentage">0%</p>
+  </div>
+</section>
+
+<p id="statusMessage" class="status"></p>
+
+<!-- CHART -->
+<section class="chart-section">
+  <canvas id="attendanceChart"></canvas>
+</section>
+
+<script src="js/attendance-percentage.js"></script>
+</body>
+</html>
