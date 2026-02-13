@@ -91,27 +91,78 @@ All major features are implemented and demonstrated below:
 
 📝 User Registration – Account & Role Creation
 
+
+<img width="1920" height="1020" alt="User Registration" src="https://github.com/user-attachments/assets/c0af6f6b-eb40-444c-8449-825d206217f5" />
+
+
 📸 Face Registration – Live Camera Capture
+
+
+<img width="1920" height="1020" alt="Face Registration" src="https://github.com/user-attachments/assets/0ab55b20-04c5-49a9-ae1d-3b957e1c2269" />
+
 
 🔐 Login Page – Secure User Authentication
 
+
+<img width="1920" height="1020" alt="Login Page" src="https://github.com/user-attachments/assets/ae09bcfb-f4bd-4a2b-b931-d8e505dd3bec" />
+
+
 🔐 Admin Dashboard – Profile & System Modules
+
+<img width="1920" height="1020" alt="Admin Dashboard" src="https://github.com/user-attachments/assets/548bc1a4-f27e-405b-8b7b-2393425a3746" />
+
 
 🧑‍🏫 Staff Dashboard – Attendance & Management Access
 
+
+<img width="1920" height="1020" alt="Staff Dashboard" src="https://github.com/user-attachments/assets/927eb8e0-f0cc-4d3d-a3cb-93e858b54f81" />
+
+
 🎓 Student Dashboard – Personal Attendance Overview
+
+
+<img width="1920" height="1020" alt="Student Dashboard" src="https://github.com/user-attachments/assets/0d7b0089-27af-4693-9602-136129a5a51a" />
+
 
 📸 Mark Attendance – Live Face Capture & Verification
 
+
+<img width="1920" height="1020" alt="Mark Attendance" src="https://github.com/user-attachments/assets/529aef2e-9c90-4e5c-9446-d40fc26b2e39" />
+
+
 📋 Attendance Records – Date & Role Filtering
+
+
+<img width="1920" height="1020" alt="Attendance Records1" src="https://github.com/user-attachments/assets/886c874e-717f-45a9-a560-fdb7dc7e957c" />
+
+<img width="1920" height="1020" alt="Attendance Records2" src="https://github.com/user-attachments/assets/964a1d24-a9bc-43a0-bb18-43fac06b154e" />
+
 
 👥 User Management – Admin Control Panel
 
+
+<img width="1920" height="1020" alt="User Management" src="https://github.com/user-attachments/assets/f054e6a1-1e28-4bd1-a208-62f3cb8b4940" />
+
+
 📥 Attendance Download – CSV, Excel & PDF Reports
+
+
+<img width="1920" height="1020" alt="Attendance Download" src="https://github.com/user-attachments/assets/207a893a-98f8-4984-987a-2d09b3f8b50a" />
+
+<img width="1920" height="1020" alt="Attendance Download1" src="https://github.com/user-attachments/assets/76f5b428-3c45-4bb3-bf62-e594c039b021" />
+
 
 📈 Attendance Percentage – Analytics & Visual Chart
 
+
+<img width="1920" height="1020" alt="Attendance Percentage" src="https://github.com/user-attachments/assets/899a04b9-5aa0-459e-a888-39d028548304" />
+
+
 📧 Email Notification – Attendance Confirmation
+
+
+<img width="1917" height="874" alt="Email Notification" src="https://github.com/user-attachments/assets/a9b5f91b-fbae-4816-9228-f62cd6ff3ed1" />
+
 ________________________________________
 
 ☁️ AWS Architecture Diagram
@@ -278,9 +329,10 @@ ________________________________________
 
 Subash M
 
-📧 mailtosubash@gmail.com
+📧 mailtomsubash@gmail.com
 
 🔗 GitHub: https://github.com/subashmuruga
 
 Built with ❤️ using AWS Serverless Architecture
+
 
