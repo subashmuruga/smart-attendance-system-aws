@@ -118,6 +118,8 @@ ________________________________________
 
 The system follows a fully serverless AWS architecture, ensuring scalability, security, and low operational cost.
 
+![AWS Architecture](architecture/aws-architecture.png)
+
 Architecture Flow:
 
 1.	User accesses frontend (browser)
@@ -281,3 +283,4 @@ Subash M
 🔗 GitHub: https://github.com/subashmuruga
 
 Built with ❤️ using AWS Serverless Architecture
+
